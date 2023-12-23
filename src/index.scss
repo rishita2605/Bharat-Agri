@@ -69,6 +69,12 @@ body,
   align-items: center;
 }
 
+@mixin absolute-center-y {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 // Shared.
 @import "../src/shared/input/input";
 @import "../src/shared/button/button";
