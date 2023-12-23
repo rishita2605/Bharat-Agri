@@ -1,14 +1,22 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
 $off-white: #f4ede4;
 $light-peach: #ecb995;
 $dark-peach: #cb7666;
 $dark-teal: #0a3840;
 $crimson: #a93d49;
-$shadow-color: rgba(18, 18, 18, 0.474);
+$shadow-color: rgba(18, 18, 18, 0.325);
+
+$body-text-1: 1.4rem;
+$body-text-2: 1.2rem;
+
+$heading-text-1: 3.2rem;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 html {
@@ -16,7 +24,6 @@ html {
   width: 100vw;
   background-color: $off-white;
   font-size: 10px;
-  font-family: 'Montserrat', sans-serif;
 }
 
 body,
@@ -25,10 +32,27 @@ body,
   width: 100%;
 }
 
+::-moz-selection {
+  /* Code for Firefox */
+  color: $off-white;
+  background-color: $dark-peach;
+}
+
+::selection {
+  color: $off-white;
+  background-color: $dark-peach;
+}
+
+// Mixins.
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+// Shared.
+@import '../src/shared/input/input';
+@import '../src/shared/button/button';
+
+// Components.
 @import '../src/components/sign-up/sign-up';

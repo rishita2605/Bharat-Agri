@@ -1,0 +1,26 @@
+.ba-input {
+  width: 100%;
+
+  .form-label {
+    font-size: $body-text-1;
+  }
+
+  .form-control {
+    background: none;
+    border: 2px solid $dark-teal;
+    height: 4.9rem;
+    padding: 1.4rem 1.8rem;
+    border-radius: 1rem;
+    margin-bottom: 2.4rem;
+    font-size: $body-text-1;
+
+    &::placeholder {
+      color: rgba($dark-teal, 0.8);
+      font-family: 'Montserrat';
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 0.25rem rgba($dark-peach, 0.25);
+    }
+  }
+}

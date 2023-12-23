@@ -1,0 +1,13 @@
+.ba-button {
+  padding: 1.2rem 4.2rem;
+  border-radius: 0.4rem 3rem;
+  font-size: $body-text-2;
+  background-color: $crimson;
+  border: none;
+  box-shadow: 0 4px 10px $shadow-color;
+  transition: background 100ms ease-in;
+
+  &:hover {
+    background: $dark-peach;
+  }
+}
