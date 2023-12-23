@@ -1,25 +1,24 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './index.css'
-import reportWebVitals from './reportWebVitals'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import './index.scss'
+import reportWebVitals from './reportWebVitals'
+import { SignUp } from './components/sign-up/sign-up'
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root')!
-)
+const root = ReactDOM.createRoot(document.getElementById('root')!)
 
 const router = createBrowserRouter([
   {
-    path: '/app',
-    element: <>hello world</>
+    path: '/',
+    element: <SignUp />,
     // add error boundary?
-  }
+  },
 ])
 
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  </React.StrictMode>,
 )
 
 // If you want to start measuring performance in your app, pass a function
