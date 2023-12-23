@@ -1,14 +1,7 @@
 import classNames from 'classnames'
 import React from 'react'
-import { Col, Form, FormControlProps, InputGroup } from 'react-bootstrap'
-
-type InputType = {
-  type: string
-  placeholder: string
-  error: string
-  required: boolean
-  label: string
-} & FormControlProps
+import { Col, Form, InputGroup } from 'react-bootstrap'
+import { type InputType } from '.'
 
 export const Input: React.FC<InputType> = ({ error, label, children, className, ...rest }) => {
   const customClassname = classNames(className, 'ba-input')
@@ -18,7 +11,7 @@ export const Input: React.FC<InputType> = ({ error, label, children, className, 
       <Form.Label>{label}</Form.Label>
       <InputGroup hasValidation>
         <Form.Control {...rest} />
-        <Form.Control.Feedback type='invalid'>{error}</Form.Control.Feedback>
+        {error && <Form.Control.Feedback type='invalid'>{error}</Form.Control.Feedback>}
       </InputGroup>
     </Form.Group>
   )

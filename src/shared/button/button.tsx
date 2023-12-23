@@ -1,9 +1,9 @@
 import classNames from 'classnames'
-import { ButtonProps, Button as ReactBootstrapButton } from 'react-bootstrap'
+import { type ButtonProps, Button as ReactBootstrapButton } from 'react-bootstrap'
 
 enum ButtonVariant {
   Primary = 'primary',
-  Secondary = 'secondary',
+  Secondary = 'secondary'
 }
 
 type ButtonType = {
@@ -21,7 +21,7 @@ export const Button: React.FC<ButtonType> = ({
 }) => {
   const customClassname = classNames(className, 'ba-button', {
     'ba-button--primary': customVariant === ButtonVariant.Primary,
-    'ba-button--secondary': customVariant === ButtonVariant.Secondary,
+    'ba-button--secondary': customVariant === ButtonVariant.Secondary
   })
 
   return (
