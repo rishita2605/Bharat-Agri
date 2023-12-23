@@ -15,7 +15,7 @@
 
     &::placeholder {
       color: rgba($dark-teal, 0.8);
-      font-family: 'Montserrat';
+      font-family: "Montserrat";
     }
 
     &:focus {
@@ -26,5 +26,7 @@
   .invalid-feedback {
     display: block;
     font-size: $body-text-2;
+    font-weight: $weight-medium;
+    color: $crimson;
   }
 }

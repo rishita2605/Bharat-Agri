@@ -15,7 +15,6 @@
     "localforage": "^1.10.0",
     "lodash": "^4.17.21",
     "match-sorter": "^6.3.1",
-    "prettier": "^3.1.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.2",
     "react-dom": "^18.2.0",
@@ -53,6 +52,9 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^8.56.0"
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.1",
+    "prettier": "^3.1.1"
   }
 }
