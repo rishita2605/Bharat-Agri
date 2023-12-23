@@ -1,0 +1,38 @@
+.product-card {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 37rem;
+  height: 44rem;
+  border-radius: 4.5rem;
+  background-color: $light-peach;
+  box-shadow: 0px 4px 10px 0px $shadow-color;
+  padding: 4.3rem 4.6rem;
+  color: $dark-teal;
+  position: relative;
+
+  &__image-container {
+    align-self: center;
+    height: 26.1rem;
+    width: 26.1rem;
+    border-radius: 50%;
+    background-color: $dark-peach;
+    filter: drop-shadow(0px 7px 20px $shadow-color);
+    margin-top: -10rem;
+    margin-bottom: 3.5rem;
+  }
+
+  &__name {
+    font-size: $heading-text-2;
+    font-weight: $weight-semi-bold;
+  }
+
+  &__desc {
+    font-size: $body-text-1;
+    font-weight: $weight-normal;
+  }
+
+  &__btn {
+    margin-top: 3.2rem;
+  }
+}

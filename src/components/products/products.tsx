@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Input } from "../../shared/input"
 import { Button } from "../../shared/button/button"
+import { ProductCard } from "./product-card"
 
 export const Products = () => {
   // States.
@@ -18,6 +19,11 @@ export const Products = () => {
             <Button>Search.</Button>
           </div>
         </div>
+      </div>
+      <div className="products__item-section">
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
       </div>
     </div>
   )

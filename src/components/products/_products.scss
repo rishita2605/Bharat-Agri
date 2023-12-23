@@ -50,4 +50,13 @@
       }
     }
   }
+
+  &__item-section {
+    border: 2px solid saddlebrown;
+    display: grid;
+    padding: 9rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
+
+@import "./product-card/product-card";
