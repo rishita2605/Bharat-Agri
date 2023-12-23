@@ -1,11 +1,10 @@
 .sign-up {
+  @include flex-center-y;
   height: 100%;
   width: 100%;
-  background: $off-white url('../../../public/assets/background-image.svg') no-repeat center center
-    fixed;
+  background: $off-white url("../../../public/assets/background-image.svg") no-repeat
+    center center fixed;
   background-size: cover;
-  display: flex;
-  align-items: center;
 
   &__form {
     @include flex-center;

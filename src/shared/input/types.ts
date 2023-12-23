@@ -8,7 +8,7 @@ export interface FormFieldsType {
 export type InputType = {
   type: string
   placeholder: string
-  required: boolean
-  label: string
+  required?: boolean
+  label?: string
   error?: string
 } & FormControlProps

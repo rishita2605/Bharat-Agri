@@ -1,4 +1,4 @@
-@import 'bootstrap/dist/css/bootstrap.min.css';
+@import "bootstrap/dist/css/bootstrap.min.css";
 
 // Colors.
 $off-white: #f4ede4;
@@ -6,6 +6,7 @@ $light-peach: #ecb995;
 $dark-peach: #cb7666;
 $dark-teal: #0a3840;
 $crimson: #a93d49;
+$light-yellow: #e2dab5;
 $shadow-color: rgba(18, 18, 18, 0.325);
 
 // Font Size.
@@ -29,7 +30,7 @@ $weight-black: 900;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 html {
@@ -63,9 +64,15 @@ body,
   align-items: center;
 }
 
+@mixin flex-center-y {
+  display: flex;
+  align-items: center;
+}
+
 // Shared.
-@import '../src/shared/input/input';
-@import '../src/shared/button/button';
+@import "../src/shared/input/input";
+@import "../src/shared/button/button";
 
 // Components.
-@import '../src/components/sign-up/sign-up';
+@import "../src/components/sign-up/sign-up";
+@import "../src/components/products/products";
