@@ -1,9 +1,8 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
-import "./index.scss"
-import reportWebVitals from "./reportWebVitals"
 import { Products, SignUp } from "./components"
+import "./index.scss"
 
 const root = ReactDOM.createRoot(document.getElementById("root")!)
 
