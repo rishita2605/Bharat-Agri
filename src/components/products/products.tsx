@@ -1,62 +1,26 @@
-import { useEffect, useState } from "react"
-import { Input } from "../../shared/input"
-import { Button } from "../../shared/button/button"
-import { ProductCard } from "./product-card"
 import axios, { AxiosResponse } from "axios"
-import { camelCase } from "lodash"
+import { isEmpty, isNil } from "lodash"
+import { useEffect, useState } from "react"
+import { Spinner } from "react-bootstrap"
+import { Button } from "../../shared/button/button"
+import { Input } from "../../shared/input"
+import { responseMapper } from "./helpers"
+import { ProductCard } from "./product-card"
 import { ProductCardProps } from "./product-card/types"
-
-type ApiResponse = {
-  id: number
-  thumbnails: [
-    {
-      id: number
-      image: string
-      detail: string
-    },
-  ]
-  crop_name: string
-  index: number
-  service_cost: null | number
-  payment_link: string
-}
-
-const productCardInitialData: ProductCardProps = {
-  id: null,
-  imgSrc: "",
-  imgAlt: "",
-  paymentLink: "",
-  productName: "",
-}
-
-const responseMapper = (data: Array<ApiResponse>) => {
-  return data.map((record: ApiResponse) => {
-    let result: ProductCardProps = { ...productCardInitialData }
-    const [image] = record.thumbnails
-
-    result.imgSrc = image.image
-    result.imgAlt = image.detail
-
-    result.paymentLink = record.payment_link
-    result.productName = record.crop_name
-    result.id = record.id
-
-    return result
-  })
-}
+import { ApiResponse } from "./types"
 
 export const Products = () => {
   // States.
   const [searchText, setSearchText] = useState<string>("")
   const [isLoading, setIsLoading] = useState<boolean>(false)
-  const [productData, setProductData] = useState<ProductCardProps[]>([
-    productCardInitialData,
-  ])
+  const [productData, setProductData] = useState<ProductCardProps[]>()
+  const [searchProduct, setSearchProduct] = useState<ProductCardProps[]>()
 
   // Constants.
   const baseUrl =
     "https://api-cache-test.leanagri.com/pop/pop_list/en/64/pop_list.json"
 
+  // Side Effects.
   useEffect(() => {
     setIsLoading(true)
     axios
@@ -77,6 +41,25 @@ export const Products = () => {
       })
   }, [])
 
+  useEffect(() => {
+    if (isEmpty(searchText)) {
+      setSearchProduct(productData)
+      return
+    }
+
+    const filtered = productData?.filter(({ productName }) => {
+      const name = productName.toLowerCase()
+      return name.includes(searchText)
+    })
+
+    setSearchProduct(filtered)
+  }, [searchText, productData])
+
+  // Handlers.
+  const handleSearchInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchText(event.target.value.toLowerCase())
+  }
+
   return (
     <div className="products">
       <div className="products__hero-section">
@@ -85,16 +68,33 @@ export const Products = () => {
             All your crops in one place!
           </div>
           <div className="products__hero-section__search__input-group">
-            <Input placeholder="Search for a crop." type="text" />
+            <Input
+              placeholder="Search for a crop."
+              type="text"
+              onChange={handleSearchInput}
+              value={searchText}
+            />
             <Button>Search.</Button>
           </div>
         </div>
       </div>
-      <div className="products__item-section">
-        {productData.map((product) => (
-          <ProductCard key={product.id} {...product} />
-        ))}
-      </div>
+      {isLoading ? (
+        <div className="products__spinner">
+          <Spinner />
+        </div>
+      ) : (
+        <div className="products__item-section">
+          {isEmpty(searchProduct) || isNil(searchProduct) ? (
+            <div className="products__item-section--empty">
+              No products to display.
+            </div>
+          ) : (
+            searchProduct.map((product) => (
+              <ProductCard key={product.id} {...product} />
+            ))
+          )}
+        </div>
+      )}
     </div>
   )
 }

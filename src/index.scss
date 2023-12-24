@@ -77,6 +77,12 @@ body,
   transform: translateY(-50%);
 }
 
+@mixin absolute-center-x {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 // Shared.
 @import "../src/shared/input/input";
 @import "../src/shared/button/button";
