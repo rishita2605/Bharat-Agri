@@ -52,10 +52,10 @@
   }
 
   &__item-section {
-    border: 2px solid saddlebrown;
     display: grid;
+    grid-gap: 6rem;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
     padding: 9rem;
-    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
