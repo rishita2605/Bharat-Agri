@@ -74,5 +74,14 @@
   }
 }
 
+@include responsive(phone) {
+  .products__hero-section {
+    &__search {
+      height: auto;
+      padding: 2.3rem 3rem;
+    }
+  }
+}
+
 @import "./product-modal/product-modal";
 @import "./product-card/product-card";
