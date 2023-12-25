@@ -33,3 +33,33 @@
     }
   }
 }
+
+@include responsive(tab-land) {
+  .sign-up {
+    @include flex-center;
+    background: $off-white url("../../../public/assets/small-background-image.svg")
+      no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+
+    &__form {
+      max-width: 60rem;
+      min-width: 40rem;
+      width: 40%;
+      margin-left: unset;
+      border: 2px solid $off-white;
+      background: $off-white;
+      padding: 9rem;
+      border-radius: 0.4rem 4rem;
+      box-shadow: 0px 10px 20px 0px $shadow-color;
+    }
+  }
+}
+
+@include responsive(phone-land) {
+  .sign-up {
+    &__form {
+      padding: 4rem;
+    }
+  }
+}
