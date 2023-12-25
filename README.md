@@ -1,46 +1,48 @@
-# Getting Started with Create React App
+# Bharat Agri
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a single-page web application which showcases my skills in TypeScript, Axios, SCSS, React-Bootstrap, and UI/UX design using Figma.
 
-## Available Scripts
+## Link to Project
 
-In the project directory, you can run:
+[![](https://img.shields.io/badge/Project_hosted_on_Netlify-informational?style=for-the-badge&logo=netlify&labelColor=22655C&color=C3C34B&logoColor=ffffff)][1]
 
-### `npm start`
+[1]: https://658929a0353789000808374a--glittery-puffpuff-c4c337.netlify.app/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Features
+- Login Page: A user-friendly login interface with predefined credentials.
+- Crop List Screen: Displays a responsive grid of crops, fetched from an API. Each crop is presented in a card with an image and name.
+- Modal View: Clicking on a crop card opens a detailed view in a modal.
 
-### `npm test`
+## Technologies Used
+![](https://img.shields.io/badge/React-informational?style=for-the-badge&logo=react&labelColor=22655C&color=C3C34B&logoColor=ffffff) &nbsp; ![](https://img.shields.io/badge/TypeScript-informational?style=for-the-badge&logo=typescript&labelColor=22655C&color=C3C34B&logoColor=ffffff) &nbsp; ![](https://img.shields.io/badge/SCSS-informational?style=for-the-badge&logo=sass&labelColor=22655C&color=C3C34B&logoColor=ffffff) &nbsp; ![](https://img.shields.io/badge/Axios-informational?style=for-the-badge&logo=axios&labelColor=22655C&color=C3C34B&logoColor=ffffff) &nbsp; ![](https://img.shields.io/badge/React_Bootstrap-informational?style=for-the-badge&logo=bootstrap&labelColor=22655C&color=C3C34B&logoColor=ffffff) &nbsp; ![](https://img.shields.io/badge/Figma_for_UI_Design-informational?style=for-the-badge&logo=figma&labelColor=22655C&color=C3C34B&logoColor=ffffff) 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Screenshots
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img width="1436" alt="Screenshot 2023-12-25 at 5 09 11 PM" src="https://github.com/rishita2605/bharat-agri/assets/64982040/c786d90d-5343-4d4d-b18b-84b627644434">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+<img width="1440" alt="Screenshot 2023-12-25 at 5 09 29 PM" src="https://github.com/rishita2605/bharat-agri/assets/64982040/c3b58b7f-ba92-4fde-ad07-422f728a8dc2">
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img width="1440" alt="Screenshot 2023-12-25 at 5 09 45 PM" src="https://github.com/rishita2605/bharat-agri/assets/64982040/b431c898-2eee-412b-a2d8-b2fb372634f3">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Future Enhancements
+**Advanced Search and Filtering**: Implement a more comprehensive search functionality allowing users to filter crops by various parameters like climate, growth time, or region.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**User Accounts and Personalization**: Introduce user account creation for personalized experiences, including saving favorite crops and settings.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Interactive Crop Calendar**: Develop an interactive calendar that advises on the best planting and harvesting times for different crops based on user location.
+
+## Setup and Installation
+To set up the project on your local machine:
+
+Clone the repository: git clone https://github.com/rishita2605/bharat-agri.git
+
+Install dependencies: `npm install`
+
+Run the project: `npm start`
