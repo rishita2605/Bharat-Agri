@@ -37,7 +37,7 @@
 @include responsive(tab-land) {
   .sign-up {
     @include flex-center;
-    background: $off-white url("../../../public/assets/small-background-image.svg")
+    background: $off-white url("../../../public/assets/mobile-background.jpg")
       no-repeat center center fixed;
     background-size: cover;
     width: 100%;
