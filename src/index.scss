@@ -28,62 +28,9 @@ $weight-bold: 700;
 $weight-extra-bold: 800;
 $weight-black: 900;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-}
-
-html {
-  height: 100vh;
-  width: 100vw;
-  background-color: $off-white;
-  font-size: 10px;
-}
-
-body,
-#root {
-  height: 100%;
-  width: 100%;
-}
-
-::-moz-selection {
-  /* Code for Firefox */
-  color: $off-white;
-  background-color: $dark-peach;
-}
-
-::selection {
-  color: $off-white;
-  background-color: $dark-peach;
-}
-
-// Mixins.
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin flex-center-y {
-  display: flex;
-  align-items: center;
-}
-
-@mixin absolute-center-y {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-@mixin absolute-center-x {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 // Shared.
+@import "../src/shared/mixins";
+@import "../src/shared/base";
 @import "../src/shared/input/input";
 @import "../src/shared/button/button";
 
